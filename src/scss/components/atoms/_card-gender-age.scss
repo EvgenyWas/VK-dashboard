@@ -1,0 +1,72 @@
+.card-gender-age {
+    grid-area: gender-age;
+    display: grid;
+    grid-template: auto 1fr / auto auto;
+    padding: 2.3rem 3.4rem 0 1rem;
+    border: 1px solid #EBEBEB;
+    border-radius: $rounded;
+    background: $primary-color;
+
+    @include sm {
+        grid-template-rows: auto auto 1fr;
+    }
+
+    &__title {
+        margin-left: 1.4rem;
+        margin-bottom: 2.1rem;
+        @include title-text;
+
+        @include sm {
+            grid-area: 1/span 1;
+            margin-bottom: 1rem;
+        }
+    }
+
+    &__info {
+        justify-self: end;
+        display: flex;
+        margin-bottom: 2.1rem;
+        margin-right: 7px;
+        gap: 10px;
+
+        @include sm {
+            grid-area: 2/span 1;
+            justify-self: start;
+            margin: 0 0 1rem 1.4rem;
+        }
+    }
+
+    &__color {
+        width: 14px;
+        height: 14px;
+        border-radius: 5px;
+        &:nth-of-type(1) {
+            background: $pink-color;
+            border: 1px solid $pink-color;
+        }
+        &:nth-of-type(2) {
+            background: $purple-color;
+            border: 1px solid $purple-color;
+        }
+    }
+
+    &__about {
+        @include small-info-text;
+    }
+
+    &__histogram-box {
+        grid-area: 2/span 2;
+        align-self: center;
+        max-width: 100%;
+        padding-bottom: 1.5rem;
+        overflow: auto;
+
+        @include sm {
+            grid-area: 3/span 1;
+        }
+    }
+
+    &__histogram {
+        min-width: 560px;
+    }
+}

@@ -1,0 +1,52 @@
+.card-device {
+    grid-area: device;
+    display: flex;
+    flex-direction: column;
+    padding: 2.2rem 1.1rem 3.1rem 2.2rem;
+    border: 1px solid #EBEBEB;
+    border-radius: $rounded;
+    background: $primary-color;
+
+    &__title {
+        margin-bottom: 3.8rem;
+        @include title-text;
+    }
+
+    &__statistics {
+        display: flex;
+        align-items: center;
+
+        @include sm {
+            justify-content: center; 
+        }
+    }
+
+    &__pie {
+        margin-right: 19px;
+    }
+
+    &__info {
+        display: grid;
+        grid-template: 1fr 1fr / 25px 1fr;
+        align-self: start;
+        row-gap: 11px;
+    }
+
+    &__about {
+        @include small-info-text;
+    }
+
+    &__color {
+        width: 14px;
+        height: 14px;
+        border-radius: 5px;
+        &:nth-of-type(1) {
+            background: $pink-color;
+            border: 1px solid $pink-color;
+        }
+        &:nth-of-type(2) {
+            background: $purple-color;
+            border: 1px solid $purple-color;
+        }
+    }
+}

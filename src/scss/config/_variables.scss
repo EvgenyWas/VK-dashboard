@@ -1,0 +1,42 @@
+// COLORS LIGHT THEME
+$primary-color: #FDFDFF;
+$secondary-color: #EFF3F9;
+$text-color: #4F4F4F;
+$info-color: #979797;
+$pink-color: #E786D7;
+$purple-color: #7F7FD5;
+
+// COLORS DARK THEME
+$primary-dark-color: #282C31;
+$secondary-dark-color: #212427;
+$text-dark-color: #CACACA;
+
+// TYPOGRAPHY
+$font: 'Gilroy';
+$font-weights: (
+    'medium': 500,
+    'semibold': 600,
+    'bold': 700
+);
+@function weight($weight-name) {
+    @return map-get($font-weights, $weight-name);
+}
+$xl-text: 3rem;
+$lg-text: 2rem;
+$md-text: 1.2rem;
+
+// TEMP
+$rounded: 14px;
+
+// MEDIA QUERIES
+// Small tablets and large smartphones (landscape view)
+$screen-sm-max: 576px;
+
+// Small tablets (portrait view)
+$screen-md-max: 768px;
+
+// Tablets and small desktops
+$screen-lg-max: 992px;
+
+// Large tablets and desktops
+$screen-xl-max: 1200px;

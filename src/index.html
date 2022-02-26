@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/index.js" defer></script>
+    <link rel="stylesheet" href="fonts/gilroy/stylesheet.css" type="text/css">
+    <link rel="stylesheet" href="scss/index.scss">
+    <title>VK dashboard</title>
+</head>
+<body>
+    <div class="wrapper">
+        <!-- NAV -->
+        <nav class="nav">
+            <a href="#" class="nav__logotype"><img src="assets/nav/logotype.svg" alt="Logotype" class="nav__logo"></a>
+            <div class="nav__links">
+                <a href="#" class="nav__link"><img src="assets/nav/home.svg" alt="Home" class="nav__home"></a>
+                <a href="#" class="nav__link"><img src="assets/nav/list.svg" alt="List" class="nav__list"></a>
+                <a href="#" class="nav__link"><img src="assets/nav/persons.svg" alt="Persons" class="nav__persons"></a>
+                <a href="#" class="nav__link"><img src="assets/nav/mail.svg" alt="Mail" class="nav__mail"></a>
+                <a href="#" class="nav__link"><img src="assets/nav/play.svg" alt="Play" class="nav__play"></a>
+                <a href="#" class="nav__link"><img src="assets/nav/statistics.svg" alt="Statistics" class="nav__statistics"></a>
+                <a href="#" class="nav__link"><img src="assets/nav/settings.svg" alt="Settings" class="nav__settings"></a>
+            </div>
+            <img src="assets/nav/menu.svg" alt="menu" class="nav__menu">
+            <label class="nav__label">
+                <input type="checkbox" class="nav__input" id="input">
+                <span class="nav__check"></span>
+            </label>
+        </nav>
+        <!-- HEADER -->
+        <header class="header">
+            <h4 class="header__title">Statistics</h4>
+            <div class="header__search-form">
+                <input type="search" class="header__search" placeholder="Search">
+                <button class="header__notification-btn"><img src="assets/header/notification.svg" alt="Notification" class="header__icon"></button>
+            </div>
+            <div class="header__profile">
+                <h3 class="header__user-name">Anya</h3>
+                <img src="assets/header/avatar.png" alt="User" class="header__avatar">
+                <button class="header__dropdown-btn"><img src="assets/header/dropdown.svg" alt="Dropdown" class="header__dropdown"></button>
+            </div>
+        </header>
+        <!-- MAIN -->
+        <main class="main">
+            <article class="card">
+                <h3 class="card__title">Friends</h3>
+                <div class="card__options">
+                    <button class="card__options-btn"><img src="assets/main/options.svg" alt="Options" class="card__icon"></button>
+                </div>
+                <p class="card__info">271 people</p>
+                <p class="card__statistics">+ 0,7%<img src="assets/main/arrow.svg" alt="Arrow" class="card__arrow"></p>
+            </article>
+            <article class="card">
+                <h3 class="card__title">Unique visitors </h3>
+                <div class="card__options">
+                    <button class="card__options-btn"><img src="assets/main/options.svg" alt="Options" class="card__icon"></button>
+                </div>
+                <p class="card__info">69 people</p>
+                <p class="card__statistics">- 1,7%<img src="assets/main/arrow.svg" alt="Arrow" class="card__arrow"></p>
+            </article>
+            <article class="card">
+                <h3 class="card__title">Followers</h3>
+                <div class="card__options">
+                    <button class="card__options-btn"><img src="assets/main/options.svg" alt="Options" class="card__icon"></button>
+                </div>
+                <p class="card__info">288 people</p>
+                <p class="card__statistics">+ 1%<img src="assets/main/arrow.svg" alt="Arrow" class="card__arrow"></p>
+            </article>
+            <!-- AUDIENCE -->
+            <article class="card-audience">
+                <h3 class="card-audience__title">Audience reach</h3>
+                <div class="card-audience__data">
+                    <time class="card-audience__calendar">31/01/2020 – 06/02/2020</ti>
+                    <button class="card-audience__dropdown-btn"><img src="assets/main/dropdown.svg" alt="Dropdown" class="card-audience__dropdown"></button>
+                </div>
+                <div class="card-audience__checkbox">
+                    <label class="card-audience__label">
+                        <input type="checkbox" class="card-audience__check">
+                        <i class="card-audience__box"></i>
+                        <span class="card-audience__check-name">Total</span>
+                    </label>
+                    <label class="card-audience__label">
+                        <input type="checkbox" class="card-audience__check">
+                        <i class="card-audience__box"></i>
+                        <span class="card-audience__check-name">Follower</span>
+                    </label>
+                </div>
+                <div class="card-audience__graph-box">
+                    <img src="assets/main/graph.svg" alt="Graph" class="card-audience__graph">
+                </div>
+            </article>
+            <!-- DEVICE -->
+            <article class="card-device">
+                <h3 class="card-device__title">Reach by device</h3>
+                <div class="card-device__statistics">
+                    <img src="assets/main/pie.svg" alt="Pie" class="card-device__pie">
+                    <div class="card-device__info">
+                        <div class="card-device__color"></div>
+                        <p class="card-device__about">Desktop</p>
+                        <div class="card-device__color"></div>
+                        <p class="card-device__about">Mobile views</p>
+                    </div>
+                </div>
+            </article>
+            <!-- GENDER/AGE -->
+            <article class="card-gender-age">
+                <h3 class="card-gender-age__title">Gender / Age</h3>
+                <div class="card-gender-age__info">
+                    <div class="card-gender-age__color"></div>
+                    <p class="card-gender-age__about">women</p>
+                    <div class="card-gender-age__color"></div>
+                    <p class="card-gender-age__about">men</p>
+                </div>
+                <div class="card-gender-age__histogram-box">
+                    <img src="assets/main/histogram.svg" alt="Histogram" class="card-gender-age__histogram">
+                </div>
+            </article>
+            <!-- GEO -->
+            <article class="card-geo">
+                <h3 class="card-geo__title">Geo</h3>
+                <div class="card-geo__checkbox">
+                    <button class="card-geo__check-btn card-geo__check-btn--active">County</button>
+                    <button class="card-geo__check-btn">City</button>
+                </div>
+                <div class="stat">
+                    <div class="stat__fill"></div>
+                    <h6 class="stat__title">Russia</h6>
+                    <span class="stat__info">94%</span>
+                </div>
+                <div class="stat">
+                    <div class="stat__fill"></div>
+                    <h6 class="stat__title">China</h6>
+                    <span class="stat__info">0,26%</span>
+                </div>
+                <div class="stat">
+                    <div class="stat__fill"></div>
+                    <h6 class="stat__title">Ukraine</h6>
+                    <span class="stat__info">0,2%</span>
+                </div>
+                <div class="stat">
+                    <div class="stat__fill"></div>
+                    <h6 class="stat__title">USA</h6>
+                    <span class="stat__info">0,2%</span>
+                </div>
+                <div class="stat">
+                    <div class="stat__fill"></div>
+                    <h6 class="stat__title">Mongolia</h6>
+                    <span class="stat__info">0,13%</span>
+                </div>
+                <div class="stat">
+                    <div class="stat__fill"></div>
+                    <h6 class="stat__title">Other</h6>
+                    <span class="stat__info">1,37%</span>
+                </div>
+            </article>
+        </main>
+    </div>
+</body>
+</html>

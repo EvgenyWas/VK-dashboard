@@ -1,0 +1,47 @@
+.card {
+    grid-area: card;
+    grid-column: span 1;
+    display: grid;
+    grid-template: 1fr 1fr / 1fr 1fr;
+    padding: 2.4rem;
+    border: 1px solid #EBEBEB;
+    border-radius: $rounded;
+    background: $primary-color;
+    
+    @include lg {
+        grid-column: span 2;
+    }
+
+    @include sm {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+
+    &__title {
+        @include title-text;
+    }
+
+    &__options {
+        text-align: end;
+        padding-top: 0.5rem;
+    }
+
+    &__info {
+        display: flex;
+        align-items: flex-end;
+        @include title-text;
+        font-weight: weight(medium);
+    }
+
+    &__statistics {
+        display: flex;
+        justify-content: end;
+        align-items: flex-end;
+        @include info-text;
+    }
+
+    &__arrow {
+        margin-left: 9px;
+        padding-bottom: 5px;
+    }
+}

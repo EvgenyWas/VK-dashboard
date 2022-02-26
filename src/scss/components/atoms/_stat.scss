@@ -1,0 +1,35 @@
+.stat {
+    position: relative;
+    max-width: 95%;
+    width: 100%;
+    min-width: 50%;
+    height: 10px;
+    background: $secondary-color;
+    border-radius: 6px;
+
+    &__fill {
+        width: 44%;
+        height: 100%;
+        background: $purple-color;
+        border-radius: 6px;
+
+    }
+
+    &__title {
+        position: absolute;
+        left: 0;
+        top: -19px;
+        @include small-info-text;
+    }
+
+    &__info {
+        position: absolute;
+        right: 0;
+        top: -19px;
+        justify-self: end;
+        @include info-text;
+        font-size: $md-text;
+    }
+
+    
+}

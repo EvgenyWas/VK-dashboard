@@ -1,0 +1,33 @@
+html {
+    font-size: 10px;
+
+    @include lg {
+        font-size: 8px;
+    }
+}
+
+body {
+    font-family: $font;
+    font-style: normal;
+    background: no-repeat url('../assets/wrapper/union.svg'), no-repeat url('../assets/wrapper/circle.svg') bottom -35% right -10% $primary-color;
+    scroll-behavior: smooth;
+}
+
+.wrapper {
+    display: grid;
+    grid-template: 137px 1fr / 100px 1fr;
+    max-width: 1280px;
+    min-height: 880px;
+    margin: 16rem auto;
+    background: $secondary-color;
+    border-radius: $rounded;
+    overflow: hidden;
+
+    @include xl {
+        margin: 16rem 2rem;
+    }
+
+    @include sm {
+        grid-template: 80px 137px 1fr / 1fr;
+    }
+}

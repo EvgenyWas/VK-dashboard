@@ -1,0 +1,85 @@
+body.dark-theme {
+    & .wrapper {
+        background: $secondary-dark-color;
+    }
+
+    & .nav {
+        border: 1px solid #4D4D4D;
+        background: $primary-dark-color;
+
+        @include md {
+            grid-area: 1/1/span 1/1;
+            background: $secondary-dark-color;
+            border: none;
+            border-top-left-radius: none;
+            border-bottom-left-radius: none;
+        }
+    }
+
+    & .header {
+        background: $secondary-dark-color;
+
+        &__title, &__user-name {
+            color: $text-dark-color;
+        }
+
+        &__search {
+            border: 1px solid #4C4C4C;
+            background: no-repeat url('../assets/header/search.svg') $primary-dark-color;
+            background-position: bottom 10px left 15px;
+        }
+    }
+
+    & .main {
+        background: $secondary-dark-color;
+    }
+
+    & .card {
+        background: $primary-dark-color;
+        border: 1px solid #4D4D4D;
+
+        &__info, &__title {
+            color: $text-dark-color;
+        }
+    }
+
+    & .card-audience {
+        background: $primary-dark-color;
+        border: 1px solid #4D4D4D;
+
+        &__title, &__calendar, &__check-name {
+            color: $text-dark-color;
+        }
+    }
+
+    & .card-device {
+        background: $primary-dark-color;
+        border: 1px solid #4D4D4D;
+
+        &__title, &__about {
+            color: $text-dark-color;
+        }
+    }
+
+    & .card-gender-age {
+        background: $primary-dark-color;
+        border: 1px solid #4D4D4D;
+
+        &__title, &__about {
+            color: $text-dark-color;
+        }
+    }
+
+    & .card-geo {
+        background: $primary-dark-color;
+        border: 1px solid #4D4D4D;
+
+        &__title, &__check-btn--active {
+            color: $text-dark-color;
+        }
+    }
+
+    & .stat__title {
+        color: $text-dark-color;
+    }
+}

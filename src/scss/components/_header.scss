@@ -1,0 +1,88 @@
+.header {
+    grid-area: 1/2/1/2;
+    display: grid;
+    grid-template: auto / auto auto 1fr auto;
+    justify-items: center;
+    align-items: center;
+    padding: 1rem 4.5rem;
+    background: $secondary-color;
+
+    @include sm {
+        grid-area: 2/1/2/1;
+        grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+        justify-items: center;
+    }
+
+    &__title {
+        grid-area: 1/1/1/1;
+        margin-right: 4.5rem;
+        font-weight: weight(bold);
+        font-size: $xl-text;
+        line-height: 1.2em;
+        color: $text-color;
+
+        @include sm {
+            margin: 0;
+        }
+    }
+
+    &__search-form {
+        grid-area: 1/2/1/2;
+        display: flex;
+        align-items: center;
+
+        @include sm {
+            grid-area: 2/span 2;
+        }
+    }
+
+    &__search {
+        width: 150px;
+        height: 32px;
+        margin-right: 24px;
+        padding-left: 38px;
+        @include small-info-text;
+        background: no-repeat url('../assets/header/search.svg') $primary-color;
+        background-position: bottom 10px left 15px;
+        border: 1px solid #EBEBEB;
+        border-radius: 8px;
+
+        &:focus {
+            background: no-repeat url('../assets/header/search.svg') $purple-color;
+            background-position: bottom 10px left 15px;
+            color: $primary-color;
+
+            &::placeholder {
+                color: $primary-color;
+            }
+        }
+    }
+
+    &__icon {
+        min-width: 2.2rem;
+    }
+
+    &__profile {
+        grid-area: 1/4/1/4;
+        display: flex;
+        align-items: center;
+
+        @include sm {
+            grid-area: 1/2/2/2;
+        }
+    }
+
+    &__user-name {
+        margin-right: 11px;
+        @include title-text;
+        font-weight: weight(semibold);
+    }
+
+    &__avatar {
+        margin-right: 9px;
+
+        @include sm {
+            width: 35px;
+        }
+    }
+}

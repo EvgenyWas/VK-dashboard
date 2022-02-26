@@ -1,0 +1,135 @@
+.nav {
+    position: relative;
+    z-index: 0;
+    grid-area: 1/1/span 2/1;
+    display: grid;
+    grid-template: 130px 1fr 130px;
+    align-items: center;
+    justify-items: center;
+    border: 1px solid #EBEBEB;
+    background: $primary-color;
+
+    @include md {
+        grid-area: 1/1/span 1/1;
+        background: $secondary-color;
+        border: none;
+    }
+
+    @include sm {
+        grid-area: 1/1/1/1;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        z-index: 1;
+        top: 61%;
+        left: 0;
+        width: 5px;
+        height: 5rem;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        background: $purple-color;
+
+        @include lg {
+            top: 59%;
+        }
+
+        @include md {
+           display: none;
+        }
+    }
+
+    &__logo {
+        width: 5.1rem;
+        height: 3.5rem;
+    }
+
+    &__links {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+
+        @include md {
+            display: none;
+        }
+    }
+
+    & input[type='checkbox']{
+        visibility: hidden;
+        display: none;
+    }
+    
+    &__check {
+        display: block;
+        position: relative;
+        width: 50px;
+        height: 25px;
+        background: $primary-color;
+        border: 0.5px solid $text-color;
+        cursor: pointer;
+        border-radius: 50px;
+        overflow: hidden;
+        transition: ease-in .6s;
+
+        @include md {
+            background: $secondary-color;
+        }
+    }
+    
+    & input[type='checkbox']:checked ~ &__check {
+        background-color: $purple-color;
+        border: none;
+    }
+    
+    &__check:before {
+        content: '';
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        background: no-repeat url('../assets/nav/moon.svg') $purple-color center;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        transition: .6s;
+
+        @include md {
+            top: 4px;
+            background: no-repeat url('../assets/nav/moon.svg') $purple-color center/50%;
+        }
+    }
+    
+    & input[type='checkbox']:checked ~ &__check:before {
+        transform: translateX(-30px);
+        background: $purple-color;
+    }
+    
+    &__check:after {
+        content: '';
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        background: $purple-color;
+        width: 15px;
+        height: 15px;
+        border: 4px solid $primary-color;
+        border-radius: 50%;
+        transition: .6s;
+        transform: translateX(30px);
+    }
+    
+    & input[type='checkbox']:checked ~ &__check:after {
+        transform: translateX(0px);
+    }
+
+    &__menu {
+        display: none;
+
+        @include md {
+            display: block;
+            width: 25px;
+            fill: $pink-color;
+        }
+    }
+}

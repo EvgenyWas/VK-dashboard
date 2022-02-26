@@ -1,0 +1,31 @@
+.card-geo {
+    grid-area: geo;
+    display: grid;
+    grid-template: auto repeat(3, 1fr) / 1fr 1fr;
+    justify-items: space-between;
+    row-gap: 2rem;
+    padding: 2.3rem;
+    border: 1px solid #EBEBEB;
+    border-radius: $rounded;
+    background: $primary-color;
+
+    &__title {
+        margin-bottom: 2rem;
+        @include title-text;
+    }
+
+    &__checkbox {
+        justify-self: end;
+        align-self: center;
+        margin-bottom: 2rem;
+    }
+    
+    &__check-btn {
+        @include small-info-text;
+        color: $info-color;
+        &--active {
+            margin-right: 10px;
+            color: $text-color;
+        }
+    }
+}

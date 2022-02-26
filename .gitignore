@@ -1,0 +1,8 @@
+.cache
+node_modules
+vk-dashboard.fig
+preview-vk-dashboard.png
+package-lock.json
+package.json
+src
+README.md
